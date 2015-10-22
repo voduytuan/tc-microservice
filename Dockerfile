@@ -24,6 +24,7 @@ ADD supervisord.conf /etc/supervisord.conf
 # create log directory for supervisord
 RUN mkdir /var/log/supervisor/
 
+# Create private folder for download config
 RUN mkdir /var/www/private
 
 
