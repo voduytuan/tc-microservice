@@ -24,4 +24,7 @@ ADD supervisord.conf /etc/supervisord.conf
 # create log directory for supervisord
 RUN mkdir /var/log/supervisor/
 
+RUN mkdir /var/www/private
+
+
 CMD [ "/var/startup.sh" ]
