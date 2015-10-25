@@ -27,5 +27,9 @@ RUN mkdir /var/log/supervisor/
 # Create private folder for download config
 RUN mkdir /var/www/private
 
+# Create directory for rrdtool storage data for collected
+RUN mkdir /etc/collectd/rrd
+RUN chmod 0755 /etc/collectd/rrd
+
 
 CMD [ "/var/startup.sh" ]
