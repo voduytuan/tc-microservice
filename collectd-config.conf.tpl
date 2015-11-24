@@ -5,17 +5,28 @@ Interval 10
 Timeout 2
 ReadThreads 5
 
-LoadPlugin cpu
 LoadPlugin disk
 LoadPlugin interface
 LoadPlugin load
 LoadPlugin memory
 LoadPlugin cpu
-LoadPlugin network
+LoadPlugin write_graphite
 
-<Plugin network>
-  Server "{{ COLLECTD_IP }}" "{{ COLLECTD_PORT | default("25826") }}"
+<Plugin write_graphite>
+ <Node "graphite01">
+   Host "{{ GRAPHITE_IP }}"
+   Port "{{ GRAPHITE_PORT | default("2003") }}"
+   Prefix "{{ GRAPHITE_PREFIX | default("collectd.") }}"
+   Protocol "tcp"
+   #Postfix ""
+   #LogSendErrors false
+   EscapeCharacter "_"
+   SeparateInstances true
+   StoreRates false
+   AlwaysAppendDS false
+ </Node>
 </Plugin>
+
 
 
 
