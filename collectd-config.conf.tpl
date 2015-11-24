@@ -11,10 +11,15 @@ LoadPlugin interface
 LoadPlugin load
 LoadPlugin memory
 LoadPlugin cpu
-LoadPlugin rrdtool
+LoadPlugin network
 
-<Plugin rrdtool>
-    DataDir "/etc/collectd/rrd"
+<Plugin network>
+  Server "{{ COLLECTD_SERVER }}" "{{ COLLECTD_PORT | default("25826") }}"
 </Plugin>
+
+
+
+
+
 
 
