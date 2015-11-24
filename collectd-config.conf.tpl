@@ -1,4 +1,4 @@
-Hostname "{{ HOST_NAME | default("webserver-docker") }}"
+Hostname "{{ HOSTNAME | default("tc-microservice-docker") }}"
 
 FQDNLookup false
 Interval 10
