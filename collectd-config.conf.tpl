@@ -14,7 +14,7 @@ LoadPlugin cpu
 LoadPlugin network
 
 <Plugin network>
-  Server "{{ COLLECTD_SERVER }}" "{{ COLLECTD_PORT | default("25826") }}"
+  Server "{{ COLLECTD_IP }}" "{{ COLLECTD_PORT | default("25826") }}"
 </Plugin>
 
 
