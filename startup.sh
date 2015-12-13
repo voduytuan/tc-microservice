@@ -5,12 +5,12 @@ echo "RUNNING..."
 
 #####################################
 ### DOWNLOAD REMOTE CONFIGURATION
-CONFIG_LOCAL_FILE="/var/www/private/config.yml"
+CONFIG_LOCAL_FILE="/var/www/private/config.php"
 
 # Download environment config if environment passed
 if [ -z "$CONFIG_URL" ];
 then
-    echo "Get default config.yml from image"
+    echo "Get default config.php from image"
 else
     echo "Config URL detected. Download config file: ${CONFIG_URL}"
 
@@ -25,6 +25,11 @@ else
         if grep -Fq "host" ${CONFIG_LOCAL_FILE}
         then
             echo "VALID."
+
+	    echo "Prepend the <?php for this file content..."
+	    sed -i -e '1i<?php \' ${CONFIG_LOCAL_FILE}
+
+
         else
             echo "INVALID file content (not found text 'host' in config file)."
             echo "Exit."
