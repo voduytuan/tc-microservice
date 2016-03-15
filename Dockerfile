@@ -18,6 +18,9 @@ RUN chmod +x /var/startup.sh
 # collectd config
 #ADD collectd-config.conf.tpl /etc/collectd/configs/collectd-config.conf.tpl
 
+# syslog-ng loggly config
+ADD loggly.conf.tpl /etc/syslog-ng/conf.d/loggly.conf.tpl
+
 # supervisord config
 ADD supervisord.conf /etc/supervisord.conf
 
