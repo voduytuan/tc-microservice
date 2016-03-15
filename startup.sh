@@ -60,8 +60,8 @@ fi
 
 #########################################
 # Replace environment COLLECTD_WRITEHTTP_HOST
-cp /etc/collectd/configs/collectd-config.conf.tpl /etc/collectd/collectd.conf.tpl
-envtpl /etc/collectd/collectd.conf.tpl
+#cp /etc/collectd/configs/collectd-config.conf.tpl /etc/collectd/collectd.conf.tpl
+#envtpl /etc/collectd/collectd.conf.tpl
 
 #############################################$
 # Replace environment LOGGLY_TOKEN, LOGGLY_TAG
