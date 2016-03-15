@@ -1,7 +1,7 @@
 FROM voduytuan/docker-nginx-php:latest
 
 RUN apt-get update 
-RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y python-setuptools collectd python-pip
+RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y python-setuptools python-pip
 
 # Install supervisord
 RUN easy_install supervisor
@@ -16,7 +16,7 @@ RUN chmod +x /var/startup.sh
 
 
 # collectd config
-ADD collectd-config.conf.tpl /etc/collectd/configs/collectd-config.conf.tpl
+#ADD collectd-config.conf.tpl /etc/collectd/configs/collectd-config.conf.tpl
 
 # supervisord config
 ADD supervisord.conf /etc/supervisord.conf
