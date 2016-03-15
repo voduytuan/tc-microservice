@@ -2,6 +2,15 @@
 
 echo "RUNNING..."
 
+#####################################
+### INSTALL LOGGLY.COM LINUX AGENT
+# Download environment config if environment passed
+if [ -z "$LOGGLY_SUBDOMAIN" ];
+then
+    echo "Ignore Loggly Agent Install"
+else
+    echo "Loggly Subdomain detected. Start install Loggly agent for subdomain: ${LOGGLY_SUBDOMAIN}" and token: ${LOGGLY_TOKEN}
+fi
 
 #####################################
 ### DOWNLOAD REMOTE CONFIGURATION
