@@ -3,19 +3,6 @@
 echo "RUNNING..."
 
 #####################################
-### INSTALL LOGGLY.COM LINUX AGENT
-# Download environment config if environment passed
-if [ -z "$LOGGLY_TOKEN" ];
-then
-    echo "Ignore Loggly Install"
-else
-    echo "Loggly token detected. Start config syslog-ng"
-    
-    
-    
-fi
-
-#####################################
 ### DOWNLOAD REMOTE CONFIGURATION
 CONFIG_LOCAL_FILE="/var/www/private/config.php"
 
