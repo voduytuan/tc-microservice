@@ -5,11 +5,14 @@ echo "RUNNING..."
 #####################################
 ### INSTALL LOGGLY.COM LINUX AGENT
 # Download environment config if environment passed
-if [ -z "$LOGGLY_SUBDOMAIN" ];
+if [ -z "$LOGGLY_TOKEN" ];
 then
-    echo "Ignore Loggly Agent Install"
+    echo "Ignore Loggly Install"
 else
-    echo "Loggly Subdomain detected. Start install Loggly agent for subdomain: ${LOGGLY_SUBDOMAIN}" and token: ${LOGGLY_TOKEN}
+    echo "Loggly token detected. Start config syslog-ng"
+    
+    
+    
 fi
 
 #####################################
