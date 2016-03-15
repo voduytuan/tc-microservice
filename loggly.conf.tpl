@@ -4,7 +4,7 @@ source s_loggly {
 	internal();	# Collect syslog-ng logs
 };
 
-template LogglyFormat { template("<${PRI}>1 ${ISODATE} ${HOST} ${PROGRAM} ${PID} ${MSGID} [{{ LOGGLY_TOKEN }}@41058 tag=\"{{ LOGGLY_TAG }}\" ] $MSG\n");
+template LogglyFormat { template("<${PRI}>1 ${ISODATE} ${HOST} ${PROGRAM} ${PID} ${MSGID} [{{ LOGGLY_TOKEN }}@41058 tag=\"{{ LOGGLY_TAG | default("Microservice") }}\" ] $MSG\n");
 	template_escape(no);
 };
 
