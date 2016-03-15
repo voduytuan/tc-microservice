@@ -1,7 +1,7 @@
 ### Syslog-ng Logging Directives for Loggly.com ###
 source s_loggly {
-	system();	# Check which OS & collect system logs
-	internal();	# Collect syslog-ng logs
+	#system();	# Check which OS & collect system logs
+	#internal();	# Collect syslog-ng logs
 };
 
 template LogglyFormat { template("<${PRI}>1 ${ISODATE} ${HOST} ${PROGRAM} ${PID} ${MSGID} [{{ LOGGLY_TOKEN }}@41058 tag=\"{{ LOGGLY_TAG | default("Microservice") }}\" ] $MSG\n");
