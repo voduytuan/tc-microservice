@@ -63,6 +63,9 @@ fi
 cp /etc/collectd/configs/collectd-config.conf.tpl /etc/collectd/collectd.conf.tpl
 envtpl /etc/collectd/collectd.conf.tpl
 
+#############################################$
+# Replace environment LOGGLY_TOKEN, LOGGLY_TAG
+envtpl /etc/syslog-ng/conf.d/loggly.conf.tpl
 
 ## run supervisord
 supervisord
